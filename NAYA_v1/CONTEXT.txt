@@ -1,0 +1,114 @@
+# Namma Yatri Driver Productivity & Earnings Enhancement App - Specification
+
+This document outlines the features and flow of the Namma Yatri driver app, focusing on enhancing productivity and earnings through a streak system, heatmap visualization, and dynamic pricing.
+
+## 1. App Flow
+
+### 1.1. Welcome Screen
+
+* **Description:** The initial screen displayed upon app launch.
+* **Features:**
+    * Clean, visually appealing design.
+    * "Get Started" or "Login" buttons.
+
+### 1.2. Sign-Up/Login
+
+* **Description:** User authentication.
+* **Features:**
+    * Email-based sign-up/login.
+    * Password management (secure storage).
+    * Potential for OTP-based verification for enhanced security.
+
+### 1.3. Main Dashboard
+
+* **Description:** The primary interface for drivers.
+* **Features:**
+    * **Task/Ride Display:**
+        * Displays incoming ride requests.
+        * Prioritized by an AI-driven algorithm (e.g., distance, earnings potential, streak bonus).
+    * **Heatmap Integration:**
+        * Displays a real-time heatmap overlay showing high demand areas.
+        * Color-coded zones indicate demand levels (e.g., red for high, green for low).
+    * **Dynamic Pricing Display:**
+        * Shows the current dynamic pricing multiplier for each ride request and for each zone in the heatmap.
+        * Displays potential earnings with dynamic pricing factored in.
+    * **Quick-Add Ride/Task:**
+        * Allows drivers to manually input ride details or personal tasks.
+    * **AI Chat Integration:**
+        * Enables drivers to interact with an AI assistant for:
+            * Ride information.
+            * Earnings projections.
+            * Navigation assistance.
+            * Help and Support.
+
+### 1.4. Focus Mode (Ride Acceptance Streak System)
+
+* **Description:** Features designed to encourage continued ride acceptance and reward drivers.
+* **Features:**
+    * **Streak Initiation:**
+        * Begins when a driver accepts a ride.
+        * A visible streak counter is displayed.
+    * **Streak Maintenance:**
+        * The streak continues when drivers accept subsequent ride requests within a defined time window.
+        * Missed requests break the streak.
+    * **Streak Bonuses:**
+        * Progressively increasing bonuses (monetary or point-based) for maintaining streaks.
+        * Visual feedback on bonus accumulation.
+    * **Notification Management:**
+        * Optional "Do Not Disturb" mode to minimize distractions during streaks.
+        * Critical notifications (e.g., urgent ride requests) are still delivered.
+    * **Timer:**
+        * A timer is shown to display the time remaining before the streak expires.
+    * **Visual Feedback:**
+        * Use of visual cues (e.g., animations, progress bars) to indicate streak status.
+
+### 1.5. Post-Session/Ride Review
+
+* **Description:** Provides feedback and progress tracking.
+* **Features:**
+    * **Earnings Summary:**
+        * Displays earnings from the completed ride/streak.
+        * Breakdown of base fare, dynamic pricing, and streak bonuses.
+    * **Streak Progress:**
+        * Visual representation of the streak's length and bonus earned.
+    * **Break/Continue Options:**
+        * Allows drivers to take a break or start another ride/streak.
+    * **Heatmap Review:**
+        * Display of the heatmap data from the completed ride's area.
+
+## 2. Core Functionalities
+
+### 2.1. Streak System
+
+* **Objective:** Increase driver engagement and continuous ride acceptance.
+* **Implementation:**
+    * Track consecutive ride acceptances within a time window.
+    * Implement a tiered bonus system.
+    * Provide clear visual feedback on streak status.
+
+### 2.2. Heatmap
+
+* **Objective:** Guide drivers to high-demand areas for increased earnings.
+* **Implementation:**
+    * Real-time data visualization of demand levels.
+    * Color-coded zones for easy interpretation.
+    * Update the heatmap in real time.
+
+### 2.3. Dynamic Pricing
+
+* **Objective:** Balance supply and demand during peak hours.
+* **Implementation:**
+    * Algorithmically adjust fares based on real-time demand.
+    * Transparent display of pricing multipliers.
+    * Display the dynamic price on the heatmap.
+    * Calculation of the total earnings based on the dynamic price.
+
+## 3. Technology Considerations
+
+* **Mapping:** Leaflet.js or Google Maps API for heatmap visualization.
+* **Real-time Data:** WebSocket or similar technologies for real-time updates.
+* **AI Integration:** API integration with a chatbot platform.
+* **Database:** Cloud-based database for secure data storage.
+* **Push Notifications:** Firebase Cloud Messaging or similar for notifications.
+
+This specification provides a comprehensive overview of the app's features and flow. Developers should use this document as a guide for implementation.
